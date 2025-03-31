@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blake's Bed & Breakfast - Weekend Events</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../styles/casita.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Blake's bed and breakfast</h1>
+  </header>
+  <!--Makes ID for script then the const time get the exact time for when the user opens the website 
+      then the if else will give them the correct greeting on what time they open the website-->
+	  <p id="Welcome"></p>
+	  <script>
+	  const time = new Date().getHours();
+	  let greeting;
+	  if (time < 10) {
+		greeting = "Good morning!";
+	  } else if (time < 17) {
+		greeting = "Good day!";
+	  } else {
+		greeting = "Good evening!";
+	  }
+	  document.getElementById("Welcome").innerHTML = greeting;
+	  </script>
+  <nav>
+  <ul> 
+    <li><a href="../index.html">Home</a></li>
+	<li><a href="../mountain.html">Mountain</a></li>
+	<li><a href="canyon.html">Canyon Room</a></li>
+	<li><a href="javelina.html">Javelina Room</a></li>
+	<li><a href="../events/weekend.html">Weekend Events</a></li>
+	<li><a href="../contact.html">Contact</a></li>
+  </ul>
+  </nav>
+  <main>
+  <h2>Weekend Events</h2>
+	<p>Enjoy every weekend in december full of fun-filled events and cozy charm at our bed and breakfast!</p>
+	<div id="flow">
+		<table>
+			<tr>
+				<th>Karaoke Night</th>
+				<td>Join us for an unforgettable karaoke experience every weekend! Whether you're a seasoned performer or just love singing your heart out with friends, our lively atmosphere, great music selection, and supportive crowd guarantee a fun-filled night for everyone. Bring your energy, pick your favorite songs, and create lasting memories—it's the perfect way to let loose and enjoy the weekend!</td>
+			</tr>
+			<tr>
+				<th>S'mores and Fire in December</th>
+				<td>Warm up your December evenings with s'mores by the campfire every Saturday night! Gather around the cozy flames, toast marshmallows to perfection, and enjoy the classic treat under the winter sky. It’s the perfect way to relax, connect with friends and family, and create heartwarming holiday memories.</td>
+			</tr>
+		</table>
+	</div>
+	<div class="row">
+		<div class="column">
+			<img src="../images/campfire.jpg" alt="Campfire with s'mores around" class="responsive" width="300" height="300">
+		</div>
+		<div class="column">
+			<img src="../images/karaoke.png" alt="Karaoke symbol" class="responsive" width="300" height="300">
+		</div>
+	</div>
+  </main>
+  <footer>
+  Copyright &copy; Blake's bed and breakfast<br>
+			<a href="mailto:gbhembree22@amarillocolleg.com">Gary Hembree</a>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+header, nav, main, footer { display: block; }
+body { background-color: #000000; /* Sets the background color*/
+       font-family: Verdana, Arial, sans-serif; /* Sets the font family for the body*/
+}
+#wrapper { width: 1200px; /* Sets the width for the wrapper*/
+           margin: auto; /* Auto sets the magrins*/
+		   background-color: #F4E8BC; /* Sets the background color for the wrapper*/
+		   color: #000000; /* Sets the color of the text for the wrapper*/
+		   box-shadow: 5px 5px 5px #000000; /* Sets the shadow for the wrapper*/
+}
+h1 { background-image: url(../images/snowboarding.gif);
+	background-repeat: no-repeat; /* Sets background image to not repeat*/
+	border-bottom: 5px solid black; /* Sets a bottom border for the h1*/
+	background-color: #DEB887; /* Sets the background color*/
+	 height: 80px; /* Sets the height for the h1*/
+	 font-family: Georgia, "Times New Roman", serif; /* Sets the font famlily*/
+	 font-size: 3em; /* For the font size*/
+     padding-left: 280px; /* Sets the left padding for the h1*/
+	 padding-top: 20px; /* Adds padding to the top of the h1*/
+	 text-shadow: 3px 3px 3px #90745D; /* Adds a text shadow to the h1*/
+	 margin-bottom: 0; /* Makes the bottom margin 0*/
+}
+nav { padding-top: 10px; /* Sets a top padding*/
+      float: left; /* Makes the letter go to the left*/
+      width: 240px; /* Makes the width of the nav 200px*/
+	  overflow: hidden; /* Hides any overflow in the nav*/
+}
+nav ul { list-style-type: none; /* Makes the style type none*/
+       padding-left: 20px; /* Adds left padding*/
+	 }
+nav li { padding-bottom: 5px; /* Adds bottom padding*/
+       font-weight: bold; /* Makes the nav li bold*/
+}
+nav a { text-decoration: underline; } /* Makes the decoration bold*/
+nav a:link { color: #330000; } /* Adds the color*/
+nav a:visited{ color: #90745D; } /* Adds the color*/
+nav a:hover { color: #3F4632; /* Adds color*/
+			  font-size: 1.1em; } /* Adds font size when hovered over*/
+
+main { background-color: #FFFFCC; /* Sets the background color*/
+          margin-left: 240px; /* Adds a left margin*/
+          padding: 1px 20px 20px 20px; /* Adds padding*/
+}
+main img { /* Makes the image float to the right*/
+		   padding-top: 10px;
+		   padding-bottom: 10px;
+}
+
+footer { background-color: #FFFFCC; /* Adds background color to the footer*/
+       margin-left: 240px; /* Adds a left margin*/
+       padding: 20px; /* Adds padding*/
+       text-align: center; /* Aligns the text to the center*/
+	   font-size: small; /* Makes the font size small*/
+	   font-style: italic; /* Italics the letters*/
+}
+/* Table Styles*/
+table {
+	margin: auto; /* Center the table*/
+	width: 90%; /* Set width to 90% of the container*/
+	border-spacing: 0; /* Remove spacing between table cells*/
+}
+
+th,td {
+	padding: 10px; /*Add padding to table cells*/
+}
+tr:nth-of-type(odd) {
+	background-color: #D2B48E; /* Background color for odd rows*/
+}
+/* Form Styles*/
+form {
+	display: flex; /* Use flexbox*/
+	flex-direction: column; /* Arrange items in a column*/
+	padding-left: 1em; /* Add left padding*/
+	width: 80%; /* Set width*/
+}
+input,textarea {
+	margin-bottom: .5em; /* Add bottom margin*/
+}
+.responsive {
+	width: 100%;
+	max-width: 400;
+	height: auto;
+}
+.row {
+	display: flex;
+}
+.column {
+	flex: 50%;
+	padding: 5px;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 66.66%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: none;
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  #wrapper {
+    width: 90%; /* Adjust wrapper width*/
+    margin: auto; /* Center the wrapper*/
+    box-shadow: 6px 6px 8px #000000; /* Sets box shadow*/
+  }
+  h1 {
+    font-size: 2em; /* Adjust font size for medium screens*/
+    padding-left: 250px; /* Sets lefts padding*/
+  }
+  nav {
+    width: 240px; /* Sets width for nav bar*/
+    padding-top: 15px; /* Adjust top padding*/
+  }
+  nav ul {
+    padding-left: 20px; /* Maintain padding alignment*/
+  }
+  main {
+    margin-left: 240px; /* Adjust margin to match nav width*/
+    padding: 15px; /* Moderate padding for content*/
+  }
+  footer {
+    margin-left: 240px; /* Sets left margin*/
+    font-size: small; /* Makes the footer font smaller*/
+  }
+  table {
+    width: 95%; /* Sets width of the table*/
+    margin: auto; /* Center the table*/
+  }
+  form {
+    width: 90%; /* Adjusts the width of the form*/
+    padding-left: 0.5em; /* Reduce padding for tighter spaces*/
+  }
+}
