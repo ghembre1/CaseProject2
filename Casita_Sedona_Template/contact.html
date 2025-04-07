@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blake's Bed & Breakfast - Contact page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/casita.css" rel="stylesheet">
+<!--Links the JS file-->
+<script src="project.js" defer></script>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Blake's bed and breakfast</h1>
+  </header>
+  <!--Makes ID for script then the const time get the exact time for when the user opens the website 
+      then the if else will give them the correct greeting on what time they open the website-->
+      <p id="Welcome"></p>
+      <script>
+      const time = new Date().getHours();
+      let greeting;
+      if (time < 10) {
+        greeting = "Good morning!";
+      } else if (time < 17) {
+        greeting = "Good day!";
+      } else {
+        greeting = "Good evening!";
+      }
+      document.getElementById("Welcome").innerHTML = greeting;
+      </script>
+<nav>
+ <!-- Unordered list -->
+  <ul> 
+    <li><a href="index.html">Home</a></li>
+	<li><a href="mountain.html">Mountain</a></li>
+	<li><a href="rooms/canyon.html">Canyon Room</a></li>
+	<li><a href="rooms/javelina.html">Javelina Room</a></li>
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+	<li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+  <main>
+  <h2>Contact us </h2>
+  <p> Want to get in contact with us. Fill out the form below!</p>
+  <!-- Job Application Form-->
+  <!--I had to add a ID for my form-->
+	<form id="myForm" method="post" action="https://webdevbasics.net/scripts/demo.php" novalidate> <!--Need novalidate so when you hit submit it overrides the HTML Form validation-->
+		<label for="myName">Name: </label>
+		<input type="text" id="myName" name="myName" required>
+    <span id="nameError" class="error"></span> <!--Add space on form to input if the input is true or not-->
+		<label for="myEmail">E-mail: </label>
+		<input type="email" id="myEmail" name="myEmail" required>
+    <span id="emailError" class="error"></span> <!--Add space on form to input if the input is true or not-->
+		<label for="myPhone">Phone number: </label>
+		<input type="tel" id="myPhone" name="myPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="806-000-0000" required>
+    <span id="phoneError" class="error"></span> <!--Add space on form to input if the input is true or not-->
+		<input type="submit" value="Submit">
+	</form>
+  </main>
+  <footer>
+  Copyright &copy; Blake's bed and breakfast<br>
+			<a href="mailto:gbhembree22@amarillocolleg.com">Gary Hembree</a>
+  </footer>
+</div>
+</body>
+</html>

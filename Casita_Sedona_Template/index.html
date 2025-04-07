@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+<title>Blake's Bed & Breakfast</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/casita.css" rel="stylesheet">
+<!--Links the JS file-->
+<script src="project.js" defer></script>
+</head>
+<!-- Body elements -->
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Blake's bed and breakfast</h1>
+  </header>
+  <!--Makes ID for script then the const time get the exact time for when the user opens the website 
+      then the if else will give them the correct greeting on what time they open the website-->
+      <p id="Welcome"></p>
+      <script>
+      const time = new Date().getHours();
+      let greeting;
+      if (time < 10) {
+        greeting = "Good morning!";
+      } else if (time < 17) {
+        greeting = "Good day!";
+      } else {
+        greeting = "Good evening!";
+      }
+      document.getElementById("Welcome").innerHTML = greeting;
+      </script>
+  <nav>
+ <!-- Unordered list -->
+  <ul> 
+    <li><a href="index.html">Home</a></li>
+	<li><a href="mountain.html">Mountain</a></li>
+	<li><a href="rooms/canyon.html">Canyon Room</a></li>
+	<li><a href="rooms/javelina.html">Javelina Room</a></li>
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+	<li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+  <!-- Main -->
+ <main>
+ <!-- H2 -->
+ <h2>Welcome to Blake's bed and breakfast</h2>
+ <p>Here at Blake's bed and breakfast located in Angelfire we offer the best sleep in town paired with some of the best breakfast you will ever eat. Here at Blake's we have cozy rooms to make you feel at home. We have the best view of the mountain and have easy access to the mountain when its ski season. We serve all kinds of breakfast items for everyone to enjoy before their big day.</p>
+ <!-- H3 -->
+ <h3>Breakfast</h3>
+ <p>We keep it simple every morning by making everyones favorite breakfast. The food is ready and starts being served at 6am and ends at 11am.
+  <img src="images/angelfire.jfif" alt="Angel Fire" class="responsive" width="474" height="280">
+  </main>
+  <!-- Footer -->
+  <footer>
+  Copyright &copy; Blake's bed and breakfast<br>
+			<a href="mailto:gbhembree22@amarillocolleg.com">Gary Hembree</a>
+			<div>
+				<script>
+					document.write("This page was last modified on: " + document.lastModified)
+				</script>
+			</div>
+  </footer>
+</div>
+</body>
+</html>
