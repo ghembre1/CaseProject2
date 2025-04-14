@@ -3,11 +3,11 @@
 //Gets my form and adds an event for when the user hits submit. The 'e' is for when the user hits submit on the form.
 document.getElementById('myForm').addEventListener('submit', function (e) {
     e.preventDefault(); // This prevents the default form submission when you hit submit
-    // Clears and error messages when page is either refreshed or opened for the first time
+    // Clears the error messages when page is either refreshed or opened for the first time
     document.getElementById('nameError').textContent = '';
     document.getElementById('emailError').textContent = '';
     document.getElementById('phoneError').textContent = '';
-
+    
     try {
       let valid = true;
       //Gets users inputs from the form
@@ -30,7 +30,7 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
         document.getElementById('emailError').textContent = 'Enter a valid email address.';
         valid = false; //If it is false it goes to the next if
       }
-      //Test to see if email ends in @gmail.com and if it does it will print out the email error
+      //Test to see if email ends in @gmail.com and if it does it will print out the email error ' Emails from gmail.com are not allowed.'
       else if (restrictedDomainPattern.test(email)) {
         document.getElementById('emailError').textContent = 'Emails from gmail.com are not allowed.';
         valid = false;
