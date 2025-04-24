@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles/casita.css" rel="stylesheet">
-<!--Links the JS file-->
+<script src="map.js" defer></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyA4-a0-Cky31xCiqy6oty-oRzoZDxLqg&callback=initMap"></script> <!--Links the JS file-->
 <script src="project.js" defer></script>
 <body>
 <div id="wrapper">
@@ -55,6 +56,8 @@
     <span id="phoneError" class="error"></span> <!--Add space on form to input if the input is true or not-->
 		<input type="submit" value="Submit">
 	</form>
+  <div id="displayMap"></div>
+  <div id="routeBox"></div>
   </main>
   <footer>
   Copyright &copy; Blake's bed and breakfast<br>
