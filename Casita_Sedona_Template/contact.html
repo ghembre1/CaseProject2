@@ -54,6 +54,9 @@
 		<label for="myPhone">Phone number: </label>
 		<input type="tel" id="myPhone" name="myPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="806-000-0000" required>
     <span id="phoneError" class="error"></span> <!--Add space on form to input if the input is true or not-->
+		<label for="myZip">ZIP Code: </label> <!--Added label for Zip Code-->
+		<input type="text" id="myZip" name="myZip" pattern="[0-9]{5}" required> 
+    <span id="zipError" class="error"></span> <!--Add space on form to input if the input is true or not-->
 		<input type="submit" value="Submit">
 	</form>
   <div id="displayMap"></div>
