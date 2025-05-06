@@ -50,3 +50,32 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
   message.innerHTML = "Error: " + err + ".";
     }
 })
+
+
+// JS Code for the Zip Code API
+document.getElementById('myZip').addEventListener('input', function () {
+  // sets up zipInput
+  let zipInput = this.value;
+  // sets up the zipError
+  let zipError = document.getElementById('zipError');
+  // goes through the zipInput and checks for the length and numbers and starts the test of verifying
+  if (zipInput.length === 5 && /^[0-9]{5}$/.test(zipInput)) {
+    // Replace 'us' with your desired country code if needed
+    let url = `http://api.zippopotam.us/us/${zipInput}`;
+    // fetches the url for the api
+    fetch(url)
+      .then(response => {
+          // if input is good it will approve
+        if (response.ok) {
+          zipError.textContent = '';
+            // if input is not okay it will display ZIP code not found
+        } else {
+          zipError.textContent = 'ZIP code not found.';
+        }
+      })
+        // if an error occurs it catches it here
+      .catch(error => {
+        console.error('ZIP API error:', error);
+        zipError.textContent = 'Error checking ZIP code.';
+      });
+});
