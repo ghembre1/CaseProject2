@@ -79,3 +79,13 @@ document.getElementById('myZip').addEventListener('input', function () {
         zipError.textContent = 'Error checking ZIP code.';
       });
 });
+
+//JQuery code section
+//Gets the input for the submit button
+  $("input#submit").click(function (e) {
+      //Prevents the default action of the button
+    e.preventDefault();
+      //Gets the id for the test <p> element and hides it when the button is clicked
+    $("#test").hide(); 
+  });
+});
