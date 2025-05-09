@@ -1,12 +1,12 @@
 //Project.js file for Case Project
 
 //Gets my form and adds an event for when the user hits submit. The 'e' is for when the user hits submit on the form.
-document.getElementById('myForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // This prevents the default form submission when you hit submit
+// document.getElementById('myForm').addEventListener('submit', function (e) {
+    // e.preventDefault(); // This prevents the default form submission when you hit submit
     // Clears the error messages when page is either refreshed or opened for the first time
-    document.getElementById('nameError').textContent = '';
-    document.getElementById('emailError').textContent = '';
-    document.getElementById('phoneError').textContent = '';
+    // document.getElementById('nameError').textContent = '';
+    // document.getElementById('emailError').textContent = '';
+    // document.getElementById('phoneError').textContent = '';
     
     try {
       let valid = true;
@@ -81,6 +81,16 @@ document.getElementById('myZip').addEventListener('input', function () {
 });
 
 //JQuery code section
+//Gets the id for my form and when it submits it runs a function
+$("#myForm").on("submit", function (e) {
+    //prevents the default action of the button
+    e.preventDefault();
+    //Gets the ids for the errors in my form
+    $("#nameError").text(''); 
+    $("#emailError").text(''); 
+    $("#phoneError").text(''); 
+  });
+});
 //Gets the input for the submit button
   $("input#submit").click(function (e) {
       //Prevents the default action of the button
